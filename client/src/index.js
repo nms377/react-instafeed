@@ -24,8 +24,8 @@ ReactDOM.render(
 	<Router>
 	  <div>
 	    <Nav />
-	    <Route exact path='/' component={ App } />
-	    <Route path='/list' component={ List } />
+	    <Route exact path='/react-instafeed' component={ App } />
+	    <Route path='/react-instafeed/list' component={ List } />
 	  </div>
 	</Router>
 	</Provider>,
