@@ -8,27 +8,25 @@ import Nav from './components/Nav';
 import List from './components/List';
 
 // Redux
-import { Provider } from 'react-redux';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+// import { Provider } from 'react-redux';
+// import { createStore, combineReducers, applyMiddleware } from 'redux';
+// import thunk from 'redux-thunk';
 
 import {
 	BrowserRouter as Router,
 	Route
 } from 'react-router-dom';
 
-let store = createStore(window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk));
+// let store = createStore(window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk));
 
 ReactDOM.render(
-	<Provider store={ store }>
 	<Router>
 	  <div>
 	    <Nav />
 	    <Route exact path='/react-instafeed' component={ App } />
 	    <Route path='/react-instafeed/list' component={ List } />
 	  </div>
-	</Router>
-	</Provider>,
+	</Router>,
 	 document.getElementById('root')
 );
 registerServiceWorker();
