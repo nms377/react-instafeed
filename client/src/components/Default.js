@@ -35,8 +35,7 @@ componentWillMount(){
 	  return(
 	    <div className="Default">
 	      {
-	      	this.state.data.map((el, i, arr) => <div className="posts-default" key={i}>
-              <img src={el.images} alt="instagram feed" />
+	      	this.state.data.map((el, i, arr) => <div className="posts-default" key={i} style={{backgroundImage: `url(${el.images})`}}>
           </div>)
 	      }
 	    </div>
